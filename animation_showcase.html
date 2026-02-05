@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <link rel="icon" type="image/png" href="love-always-wins.png">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gift Surprise</title>
@@ -20,15 +19,16 @@ body{
     font-family:Segoe UI;
 }
 
-/* Gift */
+/* ===== Gift ===== */
 .gift{
     position:relative;
     width:170px;
     height:170px;
     cursor:pointer;
+    transition:0.8s;
 }
 
-/* Box */
+/* ===== Box ===== */
 .box{
     width:100%;
     height:100%;
@@ -41,7 +41,7 @@ body{
     overflow:hidden;
 }
 
-/* Ribbons */
+/* ===== Ribbons ===== */
 .ribbon-v{
     position:absolute;
     width:35px;
@@ -60,7 +60,7 @@ body{
     transform:translateY(-50%);
 }
 
-/* Lid */
+/* ===== Lid ===== */
 .lid{
     position:absolute;
     width:190px;
@@ -76,7 +76,7 @@ body{
     transform:rotate(-35deg) translate(-120px,-90px);
 }
 
-/* Hello Message */
+/* ===== Hello Text ===== */
 .message{
     position:absolute;
     top:50%;
@@ -95,7 +95,7 @@ body{
     transform:translate(-50%,-180%);
 }
 
-/* Next Button */
+/* ===== Next Button ===== */
 .nextBtn{
     position:absolute;
     bottom:-80px;
@@ -116,7 +116,7 @@ body{
     opacity:1;
 }
 
-/* Second Screen */
+/* ===== Second Screen ===== */
 .secondScreen{
     position:fixed;
     inset:0;
@@ -127,19 +127,31 @@ body{
     background:linear-gradient(135deg,#ff758c,#ff7eb3);
     color:white;
     text-align:center;
-    font-size:22px;
     opacity:0;
     pointer-events:none;
     transition:1s;
-    padding:20px;
+    padding:30px;
 }
 
+/* SHOW second screen */
 .secondScreen.show{
     opacity:1;
     pointer-events:auto;
 }
 
-/* Particles */
+/* Text Style */
+.quote{
+    font-size:26px;
+    margin-bottom:20px;
+}
+
+.passage{
+    font-size:18px;
+    max-width:450px;
+    line-height:1.6;
+}
+
+/* ===== Particles ===== */
 .particle{
     position:absolute;
     font-size:20px;
@@ -156,7 +168,7 @@ body{
 
 <body>
 
-<!-- Gift -->
+<!-- ===== Gift Box ===== -->
 <div class="gift" onclick="openGift()">
 
     <div class="lid"></div>
@@ -173,12 +185,26 @@ body{
 </div>
 
 
-<!-- Second Screen -->
+<!-- ===== Second Screen ===== -->
 <div class="secondScreen" id="second">
-    <p>
-        Sometimes small surprises<br>
-        carry the sweetest feelings 💫
-    </p>
+
+    <div class="quote">
+        Sometimes small surprises carry the sweetest feelings 💫
+    </div>
+
+    <div class="passage">
+        Not everything meaningful needs big words.<br><br>
+
+        Sometimes it's just about creating a small moment
+        that makes someone smile unexpectedly.<br><br>
+
+        And honestly… those tiny moments
+        stay with us the longest.<br></br>
+
+        ✨ Thank you for being one of those
+calm, positive little moments.
+    </div>
+
 </div>
 
 
